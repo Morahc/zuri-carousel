@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.carousel {
+  overflow: hidden;
+  max-width: 900px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.carousel .carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel .carousel-item,
+.carousel .carousel-hidden {
+  display: none;
+}
+
+.carousel .carousel-visible {
+  display: block;
+  animation: fadeVisibility 0.5s;
+}
+
+#prev,
+#next {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -23px;
+  padding: 15px;
+  color: #fff;
+  font-size: 24px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+#next {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+#prev:hover,
+#next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity linear;
+  }
+}

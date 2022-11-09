@@ -31,14 +31,31 @@ section {
   display: block;
   animation: fadeVisibility 0.5s;
 }
+.cta {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.cta:hover {
+  opacity: 1;
+}
+.cta-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
 
 #prev,
 #next {
   cursor: pointer;
-  position: absolute;
-  top: 48%;
   width: auto;
-  margin-top: -23px;
   padding: 15px;
   color: #fff;
   font-size: 24px;
